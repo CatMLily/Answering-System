@@ -26,32 +26,33 @@
         );
     });
 
-    // 测试ajax 表单
-    $(function(){
-    	var options = {
-    		target: '#usercom', // 将服务器返回的内容放入id为usercom的元素中
-    		beforeSubmit: showRequest, // 提交前的回调函数
-    		resetForm: true // 成功提交后，重置表单
-    	};
-
-    	// 提交表单
-    	$("#form1").ajaxForm(options);
-    });
-
-    // 提交前
-    function showRequest(formData, jqForm, options){
-      // 验证问题输入是否为空
-      var form1 = jqForm[0];
-      if(!form1.question_input.value){
-        alert("Please enter you question.");
-        return false;
+        // 表单的异步提交，与中间件对接返回数据
+    (function($) {
+      var config = {
+        url: 'http://115.28.26.5/middleware',
+        form: $('#form1')
       }
-    	var queryString = $.param(formData);// 组装数据，序列化表单元素
-    	return true;
-    }
+      $('document').ready(function() {
+        $('input[name=form_submit]').click(function(event) {
+          // console.log($('#form1').serialize());
+          $.post(config.url, $('#form1').serialize(), function(data) {
+            // console.log(data);
+            data = JSON.parse(data);
+              if (data.error == '200') {
+                $('#usercom').html(data.content);
+              } else {
+                alert(data.content);
+              }
+          });
 
-    //历史记录面板，使用localstorage
-    //  存储
+          return false;
+        });      
+      })
+
+    })(jQuery);
+     
+    // 历史记录面板，使用localstorage
+    // 存储
     function saveStorage(id){
       var data = document.getElementById(id).innerHTML; //获取输入内容
       var time = new Date().getTime();
@@ -60,7 +61,7 @@
       loadStorage("showmsg");
 
     }
-    //将对象存储到数组中去，并将其按照时间先后排序
+    // 将对象存储到数组中去，并将其按照时间先后排序
     function loadarr(){
       var arr = new Array();
       for(var i = 0; i<localStorage.length; i++){
