@@ -7,9 +7,9 @@
 * HTML5的localstorage实现本地存储
 ---
 ### 主要技术
-*  HTML&CSS
-*  jQuery
-*  HTML5 localstorage
+* HTML&CSS
+* jQuery
+* HTML5 localstorage
 ---
 ### 待改进
  这周末想用它来练练响应式啊=。=
