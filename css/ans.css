@@ -7,7 +7,7 @@ body{
   overflow-x: hidden;
   overflow-y: auto;
   margin: 0px;
-  background: url(../image/ans7.gif) no-repeat center;
+  background: url(../image/answering.gif) repeat center;
   background-size: cover;
   font-family: sans-serif;
 }
@@ -20,19 +20,14 @@ body{
   min-width: 800px;
 }
 /* 系统帮助样式 */
-
 .guide{
   position: absolute;
   left: -12%;
 /*  right: 90%;
-*/top: 10.5%;
+*/top: 1%;
   width: 22%;
-  color: rgba(255,153,102,1);
-  background-color: #ffcc99;
+  color: #ffcc99;
   border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
-     -moz-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
-          box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
 }
 .content{
   margin-left: 0;
@@ -46,25 +41,29 @@ body{
 }
 #help{
   margin: 0;
-  width: 100%;
+  padding: 0;
+  width: 30%;
+  border: 1px solid #ffcc99;
+  cursor: pointer;
+  border-radius: 10px;
   height: 30%;
-  padding-top: 2%;
   text-align: center;
 
 }
-/* 标题
-#title{ 
+/* 标题 */
+.title{ 
   position: absolute;
   top: 4%;
   left: 30%;
   width: 40%;
   height: 5%;
 }
-h1{
-  margin: 0px;
-  padding: 0px;
-  font-family: sans-serif;
-} */
+.title img{
+  display: block;
+  margin: 0;
+  width: 100%;
+
+}
 /* 问题选项按钮所在区域定位 */
 #choose{
   position: absolute;
@@ -73,7 +72,7 @@ h1{
   width: 12.25%;
   height: 4%;
   padding: 0px;
-  background: transparent;
+  background-color: rgba(253, 245, 230, 0.5);
 }
 /* 问题选项的样式定义 */
 #choose select{
@@ -109,6 +108,7 @@ h1{
   margin: 0px;
   font-family:sans-serif;
   font-size: 14px;
+  background-color: rgba(253, 245, 230, 0.5); 
 }
 /* 提交按钮的位置 */
 #order{
@@ -164,11 +164,11 @@ h1{
 	height: 40%;
 	border: 2px solid #ffcc99;
   border-radius: 10px;
-  background-color:rgba(253, 245, 230, 1);
+  background-color:rgba(253, 245, 230, 0.5);
   -webkit-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
      -moz-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
           box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
-  background-color:rgba(253, 245, 230, 1);
+  background-color:rgba(253, 245, 230, 0.5);
 }
 /* 人物特色语句，及答案样式 */
 .roleplay{
@@ -200,23 +200,32 @@ h1{
   -webkit-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
      -moz-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
           box-shadow: 0 3px 10px rgba(229,117,84,0.3);
-  background-color:rgba(253, 245, 230, 1);
+  background-color:rgba(253, 245, 230, 0.5);
 }
 /* 历史记录标题居中显示 */
 legend{
   text-align: left;
+  width: 30%;
   color: #ffcc99;
 }
 /* 点击显示历史记录 */
 #showhis{
   margin: 0;
+  margin-top: -20px;
   width: 30%;
-  color: #696969;
+  color: #ffcc99;
   border: 1px solid #ffcc99;
+  border-radius: 10px;
+  background-color: rgba(252,245,230,0.8);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
      -moz-box-shadow: 0 3px 10px rgba(229,117,84,0.3);
           box-shadow: 0 3px 10px rgba(229,117,84,0.3);
-  border-radius: 10px;
+
 
 }
 /* 历史记录存储区域，初始隐藏，用户点击才显示 */
@@ -248,13 +257,6 @@ background-color: #7c2929;
 ::-webkit-scrollbar-corner {
 background-color: black;
 } 
-*//* 清除localstorage的按钮样式 
-#clear{
-  margin-left: 93%;
-  margin-top: 60px;
-  z-index: -1;
-  border: 1px solid black;
-}*/
 
 /* text输入框及下拉选择框响应样式 */
 .form-control {

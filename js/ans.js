@@ -1,4 +1,4 @@
-  // 使用须知动画定义
+    // 使用须知动画定义
     $(function(){
       $("#help").bind("click",function(){
         var $content = $(this).next();
@@ -9,6 +9,18 @@
         }
       })
     })
+    // 历史记录动画定义，点击显示历史记录，展开显示历史记录
+    $(function(){
+      $("#showhis").bind("click",function(){
+        var $content = $(this).next();
+        if($content.is(":visible")){
+          $content.slideUp(500);
+        }else{
+          $content.slideDown(500);
+        }
+      })
+    })
+
     //个性化人物的选择，点击按钮更换图片及语气
     $(function(){
         $("#replace").toggle(function(){
@@ -99,23 +111,9 @@
             localStorage.clear();
         })
     })*/
-    // 测试localstorage
-  //   $(function(){
-  //    $('#questioninput').bind("myclick", function(){
-  //          //$('#questioninput').attr("value","c");
-           
-  //       });
-  //    $('#questioninput').trigger("myclick");
-   
-  // })
 
-// function test(){
-//     // alert("success1");
-//     for(var i=0;i<10;i++){
-//       localStorage.setItem(i,"sa");
-//     }
-// }
-  // setInterval(function(){
-  //   $('input[name=question_input]').value = 'a';
-  //   saveStorage('usercom');
-  // },100);
+    // 测试localstorage
+    // setInterval(function(){
+    //   $('input[name=question_input]').value = 'a';
+    //   saveStorage('usercom');
+    // },100);
