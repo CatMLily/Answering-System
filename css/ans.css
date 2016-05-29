@@ -12,8 +12,8 @@ body{
   font-family: sans-serif;
 }
 #allcontent{
-	position: relative;
-	width: 80%;
+  position: relative;
+  width: 80%;
 	height: 700px;
   top: 0;
   margin: 0 auto;
@@ -37,11 +37,13 @@ body{
 .content p{
   text-align: left;
   padding-left: 15px;
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
 }
 #help{
   margin: 0;
   padding: 0;
   width: 30%;
+  font-family: Tahoma,Verdana;
   border: 1px solid #ffcc99;
   cursor: pointer;
   border-radius: 10px;
@@ -79,7 +81,8 @@ body{
   height: 100%;
   margin: 0px;
   padding: 1% 25%;
-  font-family: sans-serif;
+  color: #696969;
+  font-family: Tahoma,Verdana;
   font-size: 14px;
   background: url(../image/icon_button.png) no-repeat right;
   background-size: 15px 15px;
@@ -103,8 +106,8 @@ body{
   padding: 0px;
   padding-left: 5px;
   margin: 0px;
-  font-family:sans-serif;
   font-size: 14px;
+  font-family: Tahoma,Verdana;
   background-color: rgba(253, 245, 230, 0.5); 
 }
 /* 提交按钮的位置 */
@@ -122,6 +125,7 @@ body{
   height: 100%;
   padding: 0px;
   margin: 0px;
+  font-family: Tahoma,Verdana;
   border: 1.5px solid #ffcc99;
 }
 /* 个性化人物选择区域总体位置设置 */
@@ -150,6 +154,7 @@ body{
   margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
+  font-family: Tahoma,Verdana;
   border: 1.5px solid #ffcc99;
 }
 /* 问题及答案显示区域的样式 */
@@ -161,6 +166,7 @@ body{
   height: 40%;
   border: 2px solid #ffcc99;
   border-radius: 10px;
+  overflow: auto;
   background-color:rgba(253, 245, 230, 0.5);
   -webkit-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
      -moz-box-shadow: 0px 0px 10px rgba(229,117,84,0.3);
@@ -169,7 +175,7 @@ body{
 }
 /* 人物特色语句，及答案样式 */
 .roleplay{
-  font-family: sans-serif;
+  font-family: Tahoma,Verdana;
   font-size: 14px;
   color: #8DB6CD;
   text-align: left;
@@ -177,9 +183,10 @@ body{
 }
 /* 问题样式 */
 .user{
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+  font-size: 14px;
   color: #696969;
+  line-height: 150%;
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
@@ -211,6 +218,8 @@ legend{
   margin-top: -20px;
   width: 30%;
   color: #ffcc99;
+  font-family: Tahoma,Verdana;
+  font-size: 16px;
   border: 1px solid #ffcc99;
   border-radius: 10px;
   background-color: rgba(252,245,230,0.8);
@@ -229,7 +238,10 @@ legend{
 #showmsg{
   width: 100%;
   margin: 0 auto;
+  color: #696969;
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
   font-size: 14px;
+  line-height: 150%;
   text-align: left;
   padding-left: 10px;
   margin-top: 5px;
