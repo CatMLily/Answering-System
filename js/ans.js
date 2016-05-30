@@ -9,9 +9,10 @@
         }
       })
     })
-    // 历史记录动画定义，点击显示历史记录，展开显示历史记录
+    // 历史记录动画定义，点击显示历史记录，展开显示历史记录i
     $(function(){
       $("#showhis").bind("click",function(){
+        loadStorage('showmsg');
         var $content = $(this).next();
         if($content.is(":visible")){
           $content.slideUp(500);
@@ -52,6 +53,10 @@
             data = JSON.parse(data);
               if (data.error == '200') {
                 $('#usercom').html(data.content);
+                $('#userinput').html($('#test').val());
+                saveStorage('usercom');
+                loadStorage('showmsg');
+
               } else {
                 alert(data.content);
               }
@@ -66,13 +71,13 @@
     // 历史记录面板，使用localstorage
     // 存储
     function saveStorage(id){
-      var data = document.getElementById(id).innerHTML; //获取输入内容
+      var data =document.getElementById('userinput').innerHTML+"</br>"+document.getElementById(id).innerHTML;//获取答案内容
       var time = new Date().getTime();
       localStorage.setItem(time,data);//以时间来操作为键值,时间不会有重复
       //alert("success");
-      loadStorage("showmsg");
-
+      // loadStorage("showmsg");
     }
+
     // 将对象存储到数组中去，并将其按照时间先后排序
     function loadarr(){
       var arr = new Array();
@@ -84,10 +89,10 @@
         }
       }
       arr.sort(function(a, b) {
-        return a.key - b.key;
+        return b.key - a.key;
       });
 
-      console.log(arr);
+      // console.log(arr);
       return arr;
 
     }
@@ -97,7 +102,8 @@
       var arr = loadarr();
       var result = "";
       for( var j = 0; j<arr.length; j++){
-        result += arr[j].value+"</br>";
+        // 显示样式,问题-答案展开
+        result += arr[j].value+"<hr>";
 
       }
       var target = document.getElementById(id);

@@ -1,4 +1,4 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
@@ -40,13 +40,13 @@
         </div>
         <!-- 问题的输入区域 -->
         <div id="question">
-          <input type="text" class="form-control"  name="content" placeholder="Enter you question here."/>
+          <input type="text" class="form-control"  id="test" name="content" placeholder="Enter you question here."/>
         </div>
-      <input type="hidden" name="command" value="message" />
+        <input type="hidden" name="command" value="message" />
 
         <!-- 提交表单按钮，并且点击按钮会用localstorage存储数据，后显示在历史区域-->
         <div id="order">
-          <input type="submit" class="btn" name="form_submit" value="Submit" onclick="saveStorage('usercom')" />
+          <input type="submit" class="btn" name="form_submit" value="Submit" />
         </div>
       </form>
 
@@ -59,6 +59,7 @@
       <!-- 问题及答案的显示区域 -->
       <div id="display">
         <p class="roleplay">Just ask.</p>
+        <p class="userq" id="userinput"></p>
         <p class="user" id="usercom"></p>
       </div>
 
@@ -72,4 +73,3 @@
     </div>
   </body>
 </html>
-

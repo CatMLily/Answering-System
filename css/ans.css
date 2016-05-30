@@ -1,6 +1,11 @@
 *{
   box-sizing: border-box;
 }
+hr{
+  border: none;
+  background-color:#ffcc99;
+  height: 1px;
+}
 body{
   width: 100%;
   text-align: center;
@@ -183,6 +188,16 @@ body{
 }
 /* 问题样式 */
 .user{
+  font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
+  font-size: 14px;
+  color: #8DB6CD;
+  line-height: 150%;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  word-wrap: break-word;
+}
+.userq{
   font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
   font-size: 14px;
   color: #696969;
