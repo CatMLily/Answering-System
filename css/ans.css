@@ -274,12 +274,19 @@ legend{
   background-color: rgba(229,117,84, 0.9);
   border-radius: 15px;
 } /* 滑块颜色 */
+
+/* 翻页样式定义 */
+#page_navigation{
+  margin-bottom: 1px;
+  display: none;
+}
 #page_navigation a{
   padding:3px;
   padding-top: 1px;
   padding-bottom: 1px;
   font-size: 12px;
-  border:1px solid #ffcc99;
+/*  border:1px solid #ffcc99;*/
+  border: none;
   border-radius: 5px;
   margin:2px;
   color:#ffcc99;
