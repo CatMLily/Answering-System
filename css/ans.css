@@ -216,6 +216,7 @@ body{
   left: 8.5%;
   top: 67%;
   width: 80%;
+  min-width: 80%;
   min-height: 18%;
   border: 2px solid #ffcc99;
   border-radius: 10px;
@@ -255,6 +256,7 @@ legend{
 /* 历史记录存储区域，初始隐藏，用户点击才显示 */
 #showmsg{
   width: 100%;
+  min-width: 100%;
   margin: 0 auto;
   color: #696969;
   font-family: "Microsoft YaHei","微软雅黑","STXihei","华文细黑";
